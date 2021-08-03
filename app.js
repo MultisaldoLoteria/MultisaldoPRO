@@ -31,6 +31,7 @@ app.use((req, res, next) => {
 })
 
 //RUTAS BODY-PARSER
+app.use(express.static(path.join(__dirname, 'client')));
 
 app.use('/api/transacciones', tranRouter);
 app.use('/api/user', userRouter);
