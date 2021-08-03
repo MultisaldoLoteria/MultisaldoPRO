@@ -1,0 +1,28 @@
+{
+    "name": "backend",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "nodemon index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "kero",
+    "license": "ISC",
+    "dependencies": {
+        "arraylist": "^0.1.0",
+        "bcrypt-nodejs": "0.0.3",
+        "body-parser": "^1.19.0",
+        "connect-multiparty": "^2.2.0",
+        "ejs": "^3.1.5",
+        "express": "^4.17.1",
+        "fs-extra": "^9.0.1",
+        "jwt-simple": "^0.5.6",
+        "moment": "^2.29.1",
+        "mongoose": "^5.11.9",
+        "multer": "^1.4.2",
+        "nodemailer": "^6.4.17",
+        "nodemon": "^2.0.6",
+        "uuid": "^8.3.2"
+    }
+}
