@@ -920,7 +920,7 @@ class ApiConciliacionService {
     constructor(http) {
         this.http = http;
         this.token = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjMxMDEzNzY4MTQiLCJuYmYiOjE2MjM4NjY4ODcsImV4cCI6MTYyMzg3MDQ4NywiaWF0IjoxNjIzODY2ODg3LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjQ5MjIwIiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo0OTIyMCJ9.1Qr8V4pDkCf57PyX-xJRJ4SHjZH-enNgHEXyaWAOSe0';
-        this.url = _global__WEBPACK_IMPORTED_MODULE_2__["_global"].url;
+        this.url = _global__WEBPACK_IMPORTED_MODULE_2__["_global2"].url;
     }
     extractData(res) {
         let body = res;
