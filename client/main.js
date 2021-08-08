@@ -3025,7 +3025,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_global", function() { return _global; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_global2", function() { return _global2; });
 var _global = {
-    url: 'https://ec2-3-22-236-212.us-east-2.compute.amazonaws.com:5501/api/'
+    url: 'http://ec2-3-22-236-212.us-east-2.compute.amazonaws.com:5501/api/'
 };
 var _global2 = {
     url: 'https://multisaldocr.com/MULTISALDO/api/'
