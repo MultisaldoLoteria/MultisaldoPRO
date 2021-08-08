@@ -205,7 +205,7 @@ class ApiUsuarioService {
     TokenAPI() {
         const httpOptions = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
-                'Content-Type': 'application/json',
+                'content-type': 'application/json',
             })
         };
         const body = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpParams"]()
@@ -551,7 +551,7 @@ class LoginComponent {
                         alert('EL TOKEN NO SE HA GENERADO');
                     }
                     else {
-                        console.log(this.token2);
+                        console.log(this.token2, "aqui");
                         localStorage.setItem('token2', this.token2);
                         this.status = 'sucess';
                     }
@@ -919,7 +919,6 @@ __webpack_require__.r(__webpack_exports__);
 class ApiConciliacionService {
     constructor(http) {
         this.http = http;
-        this.token = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjMxMDEzNzY4MTQiLCJuYmYiOjE2MjM4NjY4ODcsImV4cCI6MTYyMzg3MDQ4NywiaWF0IjoxNjIzODY2ODg3LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjQ5MjIwIiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo0OTIyMCJ9.1Qr8V4pDkCf57PyX-xJRJ4SHjZH-enNgHEXyaWAOSe0';
         this.url = _global__WEBPACK_IMPORTED_MODULE_2__["_global2"].url;
     }
     extractData(res) {
@@ -930,7 +929,7 @@ class ApiConciliacionService {
         const httpOptions = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
                 'content-type': 'application/json',
-                'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjMxMDEzNzY4MTQiLCJuYmYiOjE2MjM4NjY4ODcsImV4cCI6MTYyMzg3MDQ4NywiaWF0IjoxNjIzODY2ODg3LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjQ5MjIwIiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo0OTIyMCJ9.1Qr8V4pDkCf57PyX-xJRJ4SHjZH-enNgHEXyaWAOSe0',
+                'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjMxMDEzNzY4MTQiLCJuYmYiOjE2Mjg0NDYxNTUsImV4cCI6MTYyODQ0OTc1NSwiaWF0IjoxNjI4NDQ2MTU1LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjQ5MjIwIiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo0OTIyMCJ9.arFdZF_dTf19uWCxF-n7gVCYsnAo_Du455SuDZSy9Pw'
             })
         };
         return this.http.post(this.url + 'Consulta/Conciliacion', JSON.stringify(modelo), httpOptions).pipe();
