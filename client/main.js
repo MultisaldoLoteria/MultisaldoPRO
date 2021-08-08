@@ -3023,7 +3023,7 @@ MaterialModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInj
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_global", function() { return _global; });
 var _global = {
-    url1: 'http://http://ec2-3-22-236-212.us-east-2.compute.amazonaws.com/:5501/api/',
+    url1: 'http://http://ec2-3-22-236-212.us-east-2.compute.amazonaws.com:5501/api/',
     url: 'https://multisaldocr.com/MULTISALDO/api/'
 };
 
