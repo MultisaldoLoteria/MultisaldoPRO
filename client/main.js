@@ -152,11 +152,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 class ApiUsuarioService {
     constructor(http) {
         this.http = http;
-        this.url1 = _global__WEBPACK_IMPORTED_MODULE_2__["_global"].url1;
-        this.url = _global__WEBPACK_IMPORTED_MODULE_2__["_global"].url;
+        this.url1 = _global__WEBPACK_IMPORTED_MODULE_2__["_global"].url;
+        this.url = _global__WEBPACK_IMPORTED_MODULE_2__["_global2"].url;
     }
     extractData(res) {
         let body = res;
@@ -1383,7 +1384,7 @@ __webpack_require__.r(__webpack_exports__);
 class ApiRolService {
     constructor(http) {
         this.http = http;
-        this.url = _global__WEBPACK_IMPORTED_MODULE_2__["_global"].url1;
+        this.url = _global__WEBPACK_IMPORTED_MODULE_2__["_global"].url;
     }
     extractData(res) {
         let body = res;
@@ -2243,7 +2244,7 @@ __webpack_require__.r(__webpack_exports__);
 class ApiRegistroService {
     constructor(http) {
         this.http = http;
-        this.url = _global__WEBPACK_IMPORTED_MODULE_2__["_global"].url1;
+        this.url = _global__WEBPACK_IMPORTED_MODULE_2__["_global"].url;
     }
     extractData(res) {
         let body = res;
@@ -3016,14 +3017,17 @@ MaterialModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInj
 /*!**************************************!*\
   !*** ./src/app/servicios/_global.ts ***!
   \**************************************/
-/*! exports provided: _global */
+/*! exports provided: _global, _global2 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_global", function() { return _global; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_global2", function() { return _global2; });
 var _global = {
-    url1: 'https://ec2-3-22-236-212.us-east-2.compute.amazonaws.com:5501/api/',
+    url: 'https://ec2-3-22-236-212.us-east-2.compute.amazonaws.com:5501/api/'
+};
+var _global2 = {
     url: 'https://multisaldocr.com/MULTISALDO/api/'
 };
 
