@@ -212,7 +212,7 @@ class ApiUsuarioService {
             .set('Usuario', '3101376814')
             .set('Password', 'ACGLJ8J49C7AF8ZuHtc/M81kAwZo+tRLk1MP2TGrF3tIHHwN8sfSloXBLaP35gFu0g==')
             .set('Distribuidor', '3');
-        return this.http.post('login/authenticate', JSON.stringify(body), httpOptions).pipe();
+        return this.http.post(this.url + 'login/authenticate', JSON.stringify(body), httpOptions).pipe();
     }
 }
 ApiUsuarioService.ɵfac = function ApiUsuarioService_Factory(t) { return new (t || ApiUsuarioService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"])); };
