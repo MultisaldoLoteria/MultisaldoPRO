@@ -212,7 +212,7 @@ class ApiUsuarioService {
             .set('Usuario', '3101376814')
             .set('Password', 'ACGLJ8J49C7AF8ZuHtc/M81kAwZo+tRLk1MP2TGrF3tIHHwN8sfSloXBLaP35gFu0g==')
             .set('Distribuidor', '3');
-        return this.http.post(this.url + 'login/authenticate', JSON.stringify(body), httpOptions).pipe();
+        return this.http.post('login/authenticate', JSON.stringify(body), httpOptions).pipe();
     }
 }
 ApiUsuarioService.ɵfac = function ApiUsuarioService_Factory(t) { return new (t || ApiUsuarioService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"])); };
@@ -929,7 +929,7 @@ class ApiConciliacionService {
         const httpOptions = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
                 'content-type': 'application/json',
-                'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjMxMDEzNzY4MTQiLCJuYmYiOjE2Mjg0NDYxNTUsImV4cCI6MTYyODQ0OTc1NSwiaWF0IjoxNjI4NDQ2MTU1LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjQ5MjIwIiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo0OTIyMCJ9.arFdZF_dTf19uWCxF-n7gVCYsnAo_Du455SuDZSy9Pw'
+                'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjMxMDEzNzY4MTQiLCJuYmYiOjE2Mjg1NTk3MzAsImV4cCI6MTYyODU2MzMzMCwiaWF0IjoxNjI4NTU5NzMwLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjQ5MjIwIiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo0OTIyMCJ9.qops7cBEAGuMNgiP9_5ojXhFHdp31vLVQz48m1YB2Mk'
             })
         };
         return this.http.post(this.url + 'Consulta/Conciliacion', JSON.stringify(modelo), httpOptions).pipe();
@@ -1193,7 +1193,7 @@ class ConciliacionComponent {
         this.date = new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"](new Date());
         this.modelos = [];
         this.modelos1 = [];
-        this.modelo = new _modelos_transacciones__WEBPACK_IMPORTED_MODULE_2__["transacciones"]('', '', '', '', '', '', '', '', '', '', '', '');
+        this.modelo = new _modelos_transacciones__WEBPACK_IMPORTED_MODULE_2__["transacciones"]('', '', '', '', '', '', '', '', '', '', '', '', '');
     }
     ngOnInit() {
     }
@@ -1201,7 +1201,7 @@ class ConciliacionComponent {
         this.aut = true;
         this._api.Post(this.modelo).subscribe(response => {
             this.modelos = response.modelo;
-            console.log(response);
+            console.log(this.modelo, 'estoy aqui e');
             this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_5__["MatTableDataSource"](this.modelos);
             this.dataSource.paginator = this.paginacion;
             const cate = this.modelos.pop();
@@ -1240,7 +1240,7 @@ ConciliacionComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵde
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, "Angular forms");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "input", 9);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function ConciliacionComponent_Template_input_ngModelChange_11_listener($event) { return ctx.modelo.FechaPago = $event; });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function ConciliacionComponent_Template_input_ngModelChange_11_listener($event) { return ctx.modelo.Fecha = $event; });
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](12, "mat-datepicker-toggle", 10);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](13, "mat-datepicker", null, 11);
@@ -1324,7 +1324,7 @@ ConciliacionComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵde
     } if (rf & 2) {
         const _r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](14);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](11);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("matDatepicker", _r1)("formControl", ctx.date)("ngModel", ctx.modelo.FechaPago);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("matDatepicker", _r1)("formControl", ctx.date)("ngModel", ctx.modelo.Fecha);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("for", _r1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](6);
@@ -2318,7 +2318,7 @@ ApiRegistroService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefi
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "transacciones", function() { return transacciones; });
 class transacciones {
-    constructor(_id, Distribuidor, IdPago, NIS, IdProducto, NumeroRecibo, Monto, Comision, FechaPago, Estado, ExternalId, IdSubProducto) {
+    constructor(_id, Distribuidor, IdPago, NIS, IdProducto, NumeroRecibo, Monto, Comision, FechaPago, Fecha, Estado, ExternalId, IdSubProducto) {
         this._id = _id;
         this.Distribuidor = Distribuidor;
         this.IdPago = IdPago;
@@ -2328,6 +2328,7 @@ class transacciones {
         this.Monto = Monto;
         this.Comision = Comision;
         this.FechaPago = FechaPago;
+        this.Fecha = Fecha;
         this.Estado = Estado;
         this.ExternalId = ExternalId;
         this.IdSubProducto = IdSubProducto;
@@ -3024,7 +3025,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_global", function() { return _global; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_global2", function() { return _global2; });
 var _global = {
-    url: 'http://ec2-3-22-236-212.us-east-2.compute.amazonaws.com/api/'
+    url: 'http://localhost:5501/api/'
 };
 var _global2 = {
     url: 'https://multisaldocr.com/MULTISALDO/api/'
